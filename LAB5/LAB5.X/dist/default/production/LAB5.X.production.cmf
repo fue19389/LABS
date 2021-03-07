@@ -1,0 +1,434 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/production/LAB5.o
+resVect CODE 0 0 0 1 2
+code CODE 0 0 0 2B1 2
+intVect CODE 0 0 0 52 2
+udata_bank0 BANK0 1 20 20 A 1
+config CONFIG 4 2007 2007 2 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 2A-6F 1
+RAM A0-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 2A-6F 1
+BANK1 A0-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 2B1-1FFF 2
+ENTRY 2B1-1FFF 2
+IDLOC 2000-2003 2
+CODE 2B1-1FFF 2
+COMMON 70-7F 1
+EEDATA 2100-21FF 2
+STRCODE 2B1-1FFF 2
+STRING 2B1-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/production/LAB5.o
+0 intVect CODE >78:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+4 intVect CODE >79:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+4 intVect CODE >80:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+5 intVect CODE >81:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+6 intVect CODE >82:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+7 intVect CODE >84:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+7 intVect CODE >85:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+8 intVect CODE >86:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+9 intVect CODE >87:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+A intVect CODE >88:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+B intVect CODE >90:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+B intVect CODE >91:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+C intVect CODE >92:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+D intVect CODE >93:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+E intVect CODE >94:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+F intVect CODE >95:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+10 intVect CODE >102:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+10 intVect CODE >103:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+12 intVect CODE >104:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+13 intVect CODE >105:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+14 intVect CODE >106:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+15 intVect CODE >107:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+16 intVect CODE >108:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+17 intVect CODE >109:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+18 intVect CODE >111:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+18 intVect CODE >112:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+1C intVect CODE >113:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+1D intVect CODE >114:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+1E intVect CODE >115:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+1F intVect CODE >116:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+20 intVect CODE >117:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+21 intVect CODE >118:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+22 intVect CODE >120:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+22 intVect CODE >121:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+23 intVect CODE >122:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+24 intVect CODE >123:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+25 intVect CODE >124:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+26 intVect CODE >126:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+26 intVect CODE >127:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+27 intVect CODE >128:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+28 intVect CODE >129:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+29 intVect CODE >130:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2A intVect CODE >132:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2A intVect CODE >133:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2B intVect CODE >134:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2C intVect CODE >136:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2D intVect CODE >137:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2E intVect CODE >138:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2F intVect CODE >139:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+30 intVect CODE >141:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+31 intVect CODE >142:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+32 intVect CODE >143:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+33 intVect CODE >144:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+34 intVect CODE >146:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+35 intVect CODE >147:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+36 intVect CODE >148:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+37 intVect CODE >149:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+38 intVect CODE >151:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+39 intVect CODE >152:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+3A intVect CODE >153:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+3B intVect CODE >154:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+3C intVect CODE >156:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+3D intVect CODE >157:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+3E intVect CODE >158:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+3F intVect CODE >159:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+40 intVect CODE >160:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+41 intVect CODE >161:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+42 intVect CODE >162:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+43 intVect CODE >164:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+43 intVect CODE >165:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+44 intVect CODE >166:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+45 intVect CODE >167:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+46 intVect CODE >168:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+46 intVect CODE >169:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+47 intVect CODE >170:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+48 intVect CODE >171:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+49 intVect CODE >172:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+49 intVect CODE >173:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+4A intVect CODE >174:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+4B intVect CODE >175:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+4C intVect CODE >176:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+4C intVect CODE >177:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+4D intVect CODE >178:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+4E intVect CODE >179:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+4F intVect CODE >180:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+4F intVect CODE >181:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+50 intVect CODE >182:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+51 intVect CODE >183:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+0 resVect CODE >70:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+0 resVect CODE >71:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+0 resVect CODE >72:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+0 code CODE >189:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+100 code CODE >190:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+100 code CODE >191:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+101 code CODE >192:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+102 code CODE >193:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+103 code CODE >194:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+104 code CODE >195:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+105 code CODE >196:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+106 code CODE >197:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+107 code CODE >198:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+108 code CODE >199:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+109 code CODE >200:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+10A code CODE >201:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+10B code CODE >202:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+10C code CODE >203:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+10D code CODE >204:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+10E code CODE >205:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+10F code CODE >206:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+110 code CODE >207:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+111 code CODE >208:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+112 code CODE >209:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+113 code CODE >210:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+114 code CODE >216:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+200 code CODE >217:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+200 code CODE >218:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+201 code CODE >219:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+202 code CODE >220:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+203 code CODE >221:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+204 code CODE >222:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+205 code CODE >223:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+206 code CODE >224:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+207 code CODE >225:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+208 code CODE >226:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+209 code CODE >228:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+209 code CODE >229:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+20A code CODE >230:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+20B code CODE >231:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+20C code CODE >232:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+20D code CODE >233:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+20E code CODE >234:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+20F code CODE >235:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+210 code CODE >236:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+211 code CODE >237:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+212 code CODE >238:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+213 code CODE >239:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+214 code CODE >245:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+214 code CODE >246:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+217 code CODE >247:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+218 code CODE >248:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+218 code CODE >249:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+21B code CODE >250:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+21C code CODE >252:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+21C code CODE >253:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+21D code CODE >254:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+21E code CODE >255:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+21F code CODE >256:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+220 code CODE >258:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+221 code CODE >259:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+222 code CODE >261:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+223 code CODE >262:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+224 code CODE >264:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+225 code CODE >265:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+226 code CODE >266:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+227 code CODE >267:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+228 code CODE >270:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+229 code CODE >271:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+22A code CODE >272:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+22B code CODE >274:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+22C code CODE >275:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+22D code CODE >276:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+22E code CODE >277:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+22F code CODE >279:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+230 code CODE >281:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+231 code CODE >282:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+232 code CODE >284:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+233 code CODE >285:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+234 code CODE >286:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+235 code CODE >287:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+236 code CODE >289:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+237 code CODE >290:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+238 code CODE >291:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+239 code CODE >292:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+23A code CODE >294:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+23B code CODE >296:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+23B code CODE >297:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+23C code CODE >298:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+23D code CODE >299:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+23E code CODE >300:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+23F code CODE >302:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+240 code CODE >303:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+241 code CODE >305:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+242 code CODE >306:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+243 code CODE >308:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+244 code CODE >309:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+245 code CODE >310:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+246 code CODE >311:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+247 code CODE >313:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+248 code CODE >315:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+249 code CODE >316:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+24A code CODE >318:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+24B code CODE >319:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+24C code CODE >320:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+24D code CODE >321:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+24E code CODE >323:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+24F code CODE >325:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+250 code CODE >326:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+251 code CODE >328:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+252 code CODE >329:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+253 code CODE >330:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+254 code CODE >331:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+255 code CODE >333:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+256 code CODE >334:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+257 code CODE >335:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+258 code CODE >336:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+259 code CODE >338:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+25A code CODE >340:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+25A code CODE >341:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+25B code CODE >342:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+25C code CODE >343:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+25D code CODE >344:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+25E code CODE >346:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+25F code CODE >347:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+260 code CODE >349:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+261 code CODE >350:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+262 code CODE >352:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+263 code CODE >353:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+264 code CODE >354:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+265 code CODE >355:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+266 code CODE >357:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+267 code CODE >359:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+268 code CODE >360:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+269 code CODE >362:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+26A code CODE >363:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+26B code CODE >364:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+26C code CODE >365:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+26D code CODE >367:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+26E code CODE >369:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+26F code CODE >370:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+270 code CODE >372:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+271 code CODE >373:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+272 code CODE >374:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+273 code CODE >375:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+274 code CODE >377:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+275 code CODE >378:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+276 code CODE >379:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+277 code CODE >380:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+278 code CODE >382:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+279 code CODE >389:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+279 code CODE >390:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+27B code CODE >391:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+27C code CODE >392:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+27D code CODE >394:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+27F code CODE >395:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+280 code CODE >396:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+281 code CODE >397:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+282 code CODE >398:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+283 code CODE >399:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+284 code CODE >400:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+285 code CODE >401:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+286 code CODE >402:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+287 code CODE >403:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+288 code CODE >405:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+289 code CODE >406:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+28A code CODE >407:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+28B code CODE >409:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+28D code CODE >410:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+28E code CODE >411:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+28F code CODE >412:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+290 code CODE >413:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+291 code CODE >415:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+291 code CODE >416:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+293 code CODE >417:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+294 code CODE >418:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+295 code CODE >419:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+296 code CODE >420:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+297 code CODE >421:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+298 code CODE >423:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+298 code CODE >424:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+29A code CODE >425:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+29B code CODE >426:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+29C code CODE >427:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+29D code CODE >428:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+29E code CODE >430:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+29E code CODE >431:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+29F code CODE >432:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2A0 code CODE >433:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2A1 code CODE >434:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2A2 code CODE >435:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2A3 code CODE >437:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2A3 code CODE >438:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2A5 code CODE >439:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2A6 code CODE >440:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2A7 code CODE >441:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2A8 code CODE >442:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2A9 code CODE >443:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2AA code CODE >444:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2AC code CODE >445:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+2B0 code CODE >446:C:\Users\gerar\MPLABXProjects\LAB5.X\LAB5.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Hspace_0 2B1 0 ABS 0 - -
+__Hspace_1 2A 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 4010 0 ABS 0 - -
+__Hudata_bank0 0 0 ABS 0 udata_bank0 -
+__Hudata_bank1 0 0 ABS 0 udata_bank1 -
+__Hudata_bank2 0 0 ABS 0 udata_bank2 -
+__Hudata_bank3 0 0 ABS 0 udata_bank3 -
+cdu 29 0 BANK0 1 udata_bank0 build/default/production/LAB5.o
+__LresVect 0 0 ABS 0 resVect -
+__Hedata 0 0 ABS 0 edata -
+__Hudata 0 0 ABS 0 udata -
+__Hconfig 4012 0 CONFIG 4 config -
+Status_temp 21 0 BANK0 1 udata_bank0 build/default/production/LAB5.o
+__Ledata 0 0 ABS 0 edata -
+__Ludata 0 0 ABS 0 udata -
+__Hcode 0 0 ABS 0 code -
+__Hdata 0 0 ABS 0 data -
+__Lcode 0 0 ABS 0 code -
+__Ldata 0 0 ABS 0 data -
+__S0 0 0 ABS 0 - -
+__S1 2A 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+cdu0 26 0 BANK0 1 udata_bank0 build/default/production/LAB5.o
+cdu1 27 0 BANK0 1 udata_bank0 build/default/production/LAB5.o
+cdu2 28 0 BANK0 1 udata_bank0 build/default/production/LAB5.o
+cont 22 0 BANK0 1 udata_bank0 build/default/production/LAB5.o
+nvar 25 0 BANK0 1 udata_bank0 build/default/production/LAB5.o
+vaux 24 0 BANK0 1 udata_bank0 build/default/production/LAB5.o
+__HresVect 0 0 ABS 0 resVect -
+__Lconfig 0 0 CONFIG 4 config -
+__LintVect 0 0 ABS 0 intVect -
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__Ludata_bank0 0 0 ABS 0 udata_bank0 -
+__Ludata_bank1 0 0 ABS 0 udata_bank1 -
+__Ludata_bank2 0 0 ABS 0 udata_bank2 -
+__Ludata_bank3 0 0 ABS 0 udata_bank3 -
+contaux 23 0 BANK0 1 udata_bank0 build/default/production/LAB5.o
+W_temp 20 0 BANK0 1 udata_bank0 build/default/production/LAB5.o
+__Hudata_shr 0 0 ABS 0 udata_shr -
+__Ludata_shr 0 0 ABS 0 udata_shr -
+__HintVect 0 0 ABS 0 intVect -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+udata_bank0 1 20 20 A 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
