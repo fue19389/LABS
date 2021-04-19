@@ -2706,11 +2706,16 @@ void cfg_iocb();
 void cfg_t0();
 void int_t0();
 void int_iocb();
-int num = 0;
+char tab7seg[10]={0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x67};
+int num;
 int num0 = 0;
 int num1 = 0;
 int num2 = 0;
-int disp();
+char cont;
+int udisp = 0;
+int ddisp = 0;
+int cdisp = 0;
+void decim();
 
 
 
@@ -2727,9 +2732,25 @@ void __attribute__((picinterrupt(("")))) isr(void){
     }
 }
 void int_t0(){
+    PORTD = 0X00;
+    if (cont == 0X00){
+        PORTD = udisp;
+        PORTA = 0x06;
+        cont++;
+    }
+    else if (cont == 0X01){
+        PORTD = ddisp;
+        PORTA = 0x05;
+        cont++;
+    }
+    else if (cont == 0X02){
+        PORTD = cdisp;
+        PORTA = 0x03;
+        cont = 0x00;
+    }
 
-    PORTA = PORTA + 1;
-    TMR0 = 0;
+
+    TMR0 = 254;
     INTCONbits.T0IF = 0;
 
     return;
@@ -2737,23 +2758,17 @@ void int_t0(){
 void int_iocb(){
 
     if (PORTBbits.RB0 == 0){
-        while(PORTBbits.RB0 == 0){
-
-            }
-        PORTC = PORTC +1;
+        PORTC++;
     }
     if (PORTBbits.RB1 == 0){
-        while(PORTBbits.RB1 == 0){
-
-            }
-        PORTC = PORTC -1;
+        PORTC--;
     }
-    return;
+    INTCONbits.RBIF = 0;
 }
 
 
 
-void main (void) {
+void main () {
     cfg_io();
     cfg_clk();
     cfg_inte();
@@ -2762,34 +2777,28 @@ void main (void) {
 
 
 
-
-
     while(1){
         decim();
     }
-
     return;
 }
 
 
 
-int decim(int num, int num0, int num1, int num2){
-
-    num2 = num / 100;
-    num = num - (num2*100);
-    num1 = num /10;
+void decim(void){
+    num = PORTC;
+    num2 = (num / 100);
+    num = (num - (num2*100));
+    num1 = (num /10);
     num = num - (num1*10);
-    num0 = num / 1;
+    num0 = num;
 
-    return num2;
-    return num1;
-    return num0;
+    udisp = tab7seg[num0];
+    ddisp = tab7seg[num1];
+    cdisp = tab7seg[num2];
+
 }
-
-
-
-
-
+# 156 "LAB7.c"
 void cfg_io(){
     ANSEL = 0x00;
     ANSELH = 0X00;
@@ -2797,6 +2806,7 @@ void cfg_io(){
     TRISB = 0x03;
     TRISC = 0x00;
     TRISA = 0X00;
+    TRISD = 0X00;
 
 
     OPTION_REGbits.nRBPU = 0 ;
@@ -2838,9 +2848,9 @@ void cfg_t0(){
     OPTION_REGbits.PSA = 0;
     OPTION_REGbits.PS2 = 1;
     OPTION_REGbits.PS1 = 1;
-    OPTION_REGbits.PS0 = 0;
+    OPTION_REGbits.PS0 = 1;
 
-    TMR0 = 250;
+    TMR0 = 254;
     INTCONbits.T0IF = 0;
 
     return;
